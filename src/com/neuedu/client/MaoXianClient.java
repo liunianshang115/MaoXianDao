@@ -1,34 +1,45 @@
 package com.neuedu.client;
 
 import com.neuedu.pojo.BackGround;
+import com.neuedu.pojo.Constant;
 import com.neuedu.pojo.Hero;
+import com.neuedu.utils.FrameUtil;
 import com.neuedu.utils.GameUtil;
 
 import java.awt.*;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 
-public class MaoXianClient extends Frame {
+public class MaoXianClient extends FrameUtil {
 
     private BackGround bg=new BackGround();
     private Hero hero=new Hero();
 
     //加载窗口
-    public void loadFram(){
-        this.setTitle("冒险岛");
-        this.setSize(1200,700);//大小
-        this.setLocationRelativeTo(null);//居中
-        this.setVisible(true);//是否显示
-        this.setBackground(Color.BLACK);//背景颜色
-        //添加窗口监听事件
-        this.addWindowListener(new WindowAdapter() {
+    @Override
+    public void loadFrame(){
+        super.loadFrame();
+        this.addKeyListener(new KeyAdapter() {
+            //按下事件
             @Override
-            public void windowClosing(WindowEvent e) {
-                System.exit(0);//当前程序结束  关闭窗口
+            public void keyPressed(KeyEvent e) {
+                hero.keyPress(e);
+            }
+            //抬起事件
+            @Override
+            public void keyReleased(KeyEvent e) {
+                hero.keyRelease(e);
             }
         });
-
     }
+
+
+
+
+
+
     /*用来将图片画在窗口上*/
     @Override
     public void paint(Graphics g) {
@@ -39,7 +50,7 @@ public class MaoXianClient extends Frame {
     }
 
     public static void main(String[] args) {
-        new MaoXianClient().loadFram();
+        new MaoXianClient().loadFrame();
     }
 
 
