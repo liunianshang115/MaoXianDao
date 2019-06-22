@@ -12,10 +12,10 @@ public class BackGround {
 
 
     public BackGround(){
-        this.image= GameUtil.getImg("com/neuedu/img/bgimg.jpg");
+        this.image= GameUtil.getImg("com/neuedu/img/timg.jpg");
         this.x=0;
         this.height=image.getHeight(null);
-        this.y=Constant.GAME_HEIGHT-height;
+        this.y=0;
 
     }
 
