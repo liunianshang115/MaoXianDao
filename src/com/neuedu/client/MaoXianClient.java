@@ -18,6 +18,12 @@ public class MaoXianClient extends FrameUtil {
     private door door = new door(1150,200);
     private BackGround bg=new BackGround();
     private Hero hero=new Hero(this);
+    private bgimg bg0=new bgimg();
+    private bgimg1 bg1=new bgimg1();
+    private bgimg2 bg2=new bgimg2();
+    private bgimg3 bg3=new bgimg3();
+    private bgimg4 bg4=new bgimg4();
+    private MobDie mobDie=new MobDie();
     //加载多个子弹
     public List<Bullet> bullets=new ArrayList<>();
     public List<Mob> mobs=new ArrayList<>();
@@ -60,11 +66,16 @@ public class MaoXianClient extends FrameUtil {
         /*super.paint(g);*/
         /*g.drawImage(GameUtil.getImg("com/neuedu/img/bgimg.jpg"),0,0,null);*/
         bg.draw(g);
-        g.drawImage(GameUtil.getImg("com/neuedu/img/bg11.png"),0,600,null);
-        g.drawImage(GameUtil.getImg("com/neuedu/img/bg11.png"),350,600,null);
-        g.drawImage(GameUtil.getImg("com/neuedu/img/bg12.png"),670,441,null);
-        g.drawImage(GameUtil.getImg("com/neuedu/img/bg12.png"),820,282,null);
-        g.drawImage(GameUtil.getImg("com/neuedu/img/bg13.png"),1085,282,null);
+        bg0.draw(g);
+        bg1.draw(g);
+        bg2.draw(g);
+        bg3.draw(g);
+        bg4.draw(g);
+//        g.drawImage(GameUtil.getImg("com/neuedu/img/bg11.png"),0,600,null);
+//        g.drawImage(GameUtil.getImg("com/neuedu/img/bg11.png"),350,600,null);
+//        g.drawImage(GameUtil.getImg("com/neuedu/img/bg12.png"),670,441,null);
+//        g.drawImage(GameUtil.getImg("com/neuedu/img/bg12.png"),820,282,null);
+//        g.drawImage(GameUtil.getImg("com/neuedu/img/bg13.png"),1085,282,null);
         hero.draw(g);
         for (int i=0;i<bullets.size();i++){
             Bullet bullet=bullets.get(i);

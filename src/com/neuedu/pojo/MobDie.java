@@ -19,6 +19,8 @@ public class MobDie {
     public boolean live=true;
     private MaoXianClient mxc;
 
+    public MobDie() {
+    }
 
     public MobDie(int x, MaoXianClient mxc){
         this.x=x;

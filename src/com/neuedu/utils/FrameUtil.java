@@ -41,7 +41,7 @@ public class FrameUtil extends Frame {//Frame是一个标题和边框的顶级�
                 repaint();//调用paint方法
                 /*时间延迟*/
                 try {
-                    Thread.sleep(50);
+                    Thread.sleep(30);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
